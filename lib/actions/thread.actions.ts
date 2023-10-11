@@ -40,27 +40,27 @@ export async function fetchPosts(pageNumber = 1, pageSize = 20) {
     const skipAmount = (pageNumber-1) * pageSize;
 
     const postQuery = Thread.find({ parentId: { $in: [null, undefined]}})
-    .sort({ createdAt: 'desc' })
+    .sort({ createdAt: "desc" })
     .skip(skipAmount)
     .limit(pageSize)
     .populate({
-        path: 'author',
-        model: User
+        path: "author",
+        model: User,
     })
     .populate({
-        path: 'children',
+        path: "children",
         populate: {
-            path: 'author',
+            path: "author",
             model: User,
-            select: "_id name parentId image"
-        }
-    })
+            select: "_id name parentId image",
+        },
+    });
 
-    const totalPostsCount = await Thread.countDocuments({ parentId : { $in: [null, undefined]}})
+    const totalPostsCount = await Thread.countDocuments({ parentId : { $in: [null, undefined]},})
 
     const posts = await postQuery.exec();
 
     const isNext = totalPostsCount > skipAmount + posts.length;
 
-    return { posts, isNext }
+    return { posts, isNext };
 }
