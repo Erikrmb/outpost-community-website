@@ -17,7 +17,7 @@ export default function TopBar(){
                         <SignOutButton>
                             <div className="flex cursor-pointer">
                                 <Image
-                                    src="Assets/logout.svg"
+                                    src="/assets/logout.svg"
                                     alt="logout"
                                     width={24}
                                     height={24}

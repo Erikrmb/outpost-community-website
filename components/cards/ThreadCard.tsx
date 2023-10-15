@@ -63,12 +63,12 @@ export default function ThreadCard({
 
                         <div className={`${isComment && 'mb-10'}mt-5 flex flex-col gap-3`}>
                             <div className="flex gap-3.5">
-                                <Image src="Assets/heart-gray.svg" alt="heart" width={24} height={24} className="cursor-pointer object-contain"></Image>
+                                <Image src="/assets/heart-gray.svg" alt="heart" width={24} height={24} className="cursor-pointer object-contain"></Image>
                                 <Link href={`/thread/${id}`}>
-                                    <Image src="Assets/reply.svg" alt="reply" width={24} height={24}  className="cursor-pointer object-contain"></Image>
+                                    <Image src="/assets/reply.svg" alt="reply" width={24} height={24}  className="cursor-pointer object-contain"></Image>
                                 </Link>
-                                <Image src="Assets/repost.svg" alt="repost" width={24} height={24}  className="cursor-pointer object-contain"></Image>
-                                <Image src="Assets/share.svg" alt="share" width={24} height={24} className="cursor-pointer object-contain"></Image>
+                                <Image src="/assets/repost.svg" alt="repost" width={24} height={24}  className="cursor-pointer object-contain"></Image>
+                                <Image src="/assets/share.svg" alt="share" width={24} height={24} className="cursor-pointer object-contain"></Image>
                             </div>
                             
                             {isComment && comments.length > 0 && (
