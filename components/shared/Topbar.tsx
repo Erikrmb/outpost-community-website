@@ -7,7 +7,7 @@ export default function TopBar(){
     return(
         <nav className="topbar">
             <Link rel="stylesheet" href="" className="flex items-center gap-4">
-                <Image src="/assets/logo.svg" alt="logo" height={28} width={28}/>
+                <Image src="Assets/logo.svg" alt="logo" height={28} width={28}/>
                 <p className="text-heading3-bold text-light-1 max-xs:hidden">Outpost</p>
             </Link>
 
