@@ -23,7 +23,7 @@ export default async function Page() {
               <Link key={activity._id} href={`/thread${activity.parentId}`}>
                 <article className="activity-card">
                   <Image 
-                    src={activity.image}
+                    src={activity.author.image}
                     alt="Profile Picture"
                     width={20}
                     height={20}
